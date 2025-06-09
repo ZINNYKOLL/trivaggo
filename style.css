@@ -1,0 +1,184 @@
+:root {
+  --cor-de-fundo: #e0e0e0;
+  --cor-de-texto: #ffffff;
+  --fonte-do-site: "Roboto Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ body {
+  height: 100%;
+  font-family: var(--fonte-do-site);
+  background-color: var(--cor-de-fundo);
+  font-weight: 700;
+  overflow: hidden;
+  position: relative;
+}
+
+.fundo-imagem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('sim.png'); /* Troque pelo caminho correto da imagem */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  color: var(--cor-de-texto);
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--cor-de-texto);
+  transition: all 0.3s;
+}
+
+.logo:hover {
+  color: rgb(255, 251, 0);
+}
+
+header nav ul {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+}
+
+header li a {
+  color: var(--cor-de-texto);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+header li a:hover {
+  color: rgb(255, 251, 0);
+  padding: 9px;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  min-height: 80vh;
+  width: 99%;
+  padding: 120px;
+}
+
+/* Caixa de login com efeito vidro fosco */
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: white;
+  max-width: 435px;
+  width: 90%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Título */
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.destaque_login {
+  color: yellow;
+}
+
+/* Inputs */
+.info_login input {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Botão */
+.info_login button {
+  width: 80%;
+  padding: 12px;
+  background-color: #ffffff33;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.info_login button:hover {
+  background-color: #ffffff55;
+}
+
+.criar_conta {
+   display: flex;
+   justify-content: center;
+   padding: 5px;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.criar_conta:hover {
+  color: rgb(238, 255, 0);
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  main {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .login-container {
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .info_login input,
+  .info_login button {
+    width: 100%;
+  }
+
+  .criar_conta {
+    font-size: 14px;
+  }
+}
